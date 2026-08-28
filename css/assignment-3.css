@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; 
+}
+:root{
+    --blue:#1877f2;
+    --off-white:#f0f2f5;
+    --white:#ffffff;
+    --grey:#6e6f99;
+    --border:#d2d2d2;
+    --green:#42b72a;
+}
+.background-color{
+    background-color: var(--off-white);
+}
+.blue-text{
+    color: var(--blue);
+}
+.h1-section1{
+    color: var(--blue);
+    font-size: 4rem;
+}
+.p-section1{
+    color: var(--grey);
+}
+.form-section1{
+    background-color: var(--white);
+}
+.input-form{
+    border: var(--border) 1px solid;
+}
+.button-green{
+    background-color: var(--green);
+}
+
+
+
+
+/* form */
+.w-30{
+    width: 40%;
+}
+

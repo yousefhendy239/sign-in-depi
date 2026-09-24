@@ -15,7 +15,7 @@ const inputGenderMale = document.querySelector(".inputGenderMale");
 const inputGenderFemale = document.querySelector(".inputGenderFemale");
 const textBirthdate = document.querySelector(".textBirthdate");
 const inputBirthdate = document.querySelector(".inputBirthdate");
-console.dir(inputBirthdate);
+
 function showError(textElement, message) {
   textElement.innerHTML = message;
   textElement.classList.add("text-danger");
@@ -88,7 +88,7 @@ function validation() {
     showError(textBirthdate, "Enter Birthdate :");
     return false;
   }
-  showSuccess(textBirthdate, "First Name :");
+  showSuccess(textBirthdate, "Birthdate :");
 
   return true;
 }

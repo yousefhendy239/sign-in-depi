@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,81 +10,91 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/assignment-3.css">
     <title>Document</title>
-    
+
 </head>
+
 <body>
     <section class="pt-4 d-flex justify-content-center align-items-start vh-100 w-100 background-color">
-        <form action="" class="col-10 col-md-5 form-section1 shadow-lg">
-                <div class="p-2 w-100 d-flex justify-content-center align-items-center bg-primary">
-                    <h1 class="text-light fs-3 fw-bold">Create Account</h1>
+        <form action="" class="col-10 col-md-5 form-section1 shadow-lg" onsubmit="return validation()">
+            <div class="p-2 w-100 d-flex justify-content-center align-items-center bg-primary">
+                <h1 class="text-light fs-3 fw-bold">Create Account</h1>
+            </div>
+            <div class="p-2 gap-3 p-md-5 row flex-column gap-md-4">
+                <!-- first and last name -->
+                <div class="row gap-2 justify-content-between">
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textFirstName">First Name :</h6>
+                        <input type="text" class="w-100 p-1 rounded input-form inputFirstName"
+                            placeholder="Enter your first name">
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textLastName">Last Name :</h6>
+                        <input type="text" class="w-100 p-1 rounded input-form inputLastName"
+                            placeholder="Last your second name">
+                    </div>
                 </div>
-                <div class="p-2 gap-3 p-md-5 row flex-column gap-md-4">
-                    <!-- first and last name -->
-                    <div class="row gap-2 justify-content-between">
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">First Name :</h6>
-                            <input type="text" class="w-100 p-1 rounded input-form" placeholder="Enter your first name">
-                        </div>
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">Last Name :</h6>
-                            <input type="text" class="w-100 p-1 rounded input-form" placeholder="Last your second name">
-                        </div>
+
+                <!-- email and phone number -->
+                <div class="row gap-2 justify-content-between">
+                    <div class="col-12 col-lg-5 ">
+                        <h6 class="blue-text fw-bold textEmail">Email :</h6>
+                        <input type="email" class="w-100 p-1 rounded input-form inputEmail"
+                            placeholder="Enter your first name">
                     </div>
-    
-                    <!-- email and phone number -->
-                    <div class="row gap-2 justify-content-between">
-                        <div class="col-12 col-lg-5 ">
-                            <h6 class="blue-text fw-bold">Email :</h6>
-                            <input type="email" class="w-100 p-1 rounded input-form" placeholder="Enter your first name">
-                        </div>
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">Phone Number :</h6>
-                            <input type="number" class="w-100 p-1 rounded input-form" placeholder="Last your second name">
-                        </div>
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textPhoneNumber">Phone Number :</h6>
+                        <input type="number" class="w-100 p-1 rounded input-form inputPhoneNumber"
+                            placeholder="Last your second name">
                     </div>
-    
-                    <!-- passwor and cofirm passowrd -->
-                    <div class="row  justify-content-between gap-2">
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">Password :</h6>
-                            <input type="password" class="w-100 p-1 rounded input-form" placeholder="Enter your first name">
-                        </div>
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">Confirm Password :</h6>
-                            <input type="password" class="w-100 p-1 rounded input-form" placeholder="Last your second name">
-                        </div>
+                </div>
+
+                <!-- passwor and cofirm passowrd -->
+                <div class="row  justify-content-between gap-2">
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textPassword">Password :</h6>
+                        <input type="password" class="w-100 p-1 rounded input-form inputPassword"
+                            placeholder="Enter your first name">
                     </div>
-                    <!-- gender and birthdate -->
-                    <div class="row  justify-content-between gap-2">
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">First Name :</h6>
-                            <div class="d-flex flex-column">
-                                <div class="d-flex align-items-center justify-content-start gap-2">
-                                    <input type="radio" name="gender">
-                                    <h6>Male</h6>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start gap-2">
-                                    <input type="radio" name="gender">
-                                    <h6>Female</h6>
-                                </div>
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textConfirmPassword">Confirm Password :</h6>
+                        <input type="password" class="w-100 p-1 rounded input-form inputConfirmPassword"
+                            placeholder="Last your second name">
+                    </div>
+                </div>
+                <!-- gender and birthdate -->
+                <div class="row  justify-content-between gap-2">
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textGender">Gender :</h6>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-start gap-2">
+                                <input type="radio" name="gender" class="inputGenderMale">
+                                <h6>Male</h6>
                             </div>
-                            
+                            <div class="d-flex align-items-center justify-content-start gap-2">
+                                <input type="radio" name="gender" class="inputGenderFemale">
+                                <h6>Female</h6>
+                            </div>
                         </div>
-                        <div class="col-12 col-lg-5">
-                            <h6 class="blue-text fw-bold">Birthdate :</h6>
-                            <input type="date" class="w-100 p-1 rounded input-form blue-text fw-bold">
-                        </div>
+
                     </div>
-    
-                    <div>
-                        <button type="reset" class="p-2 rounded fw-bold text-light bg-primary border-0">Reset</button>
-                        <button type="submit" class="p-2 rounded fw-bold text-light bg-primary border-0">Register</button>
-    
-                    </div>    
+                    <div class="col-12 col-lg-5">
+                        <h6 class="blue-text fw-bold textBirthdate">Birthdate :</h6>
+                        <input type="date" class="w-100 p-1 rounded input-form blue-text fw-bold inputBirthdate">
+                    </div>
                 </div>
+
+                <div>
+                    <button type="reset" class="p-2 rounded fw-bold text-light bg-primary border-0">Reset</button>
+                    <button type="submit"
+                        class="p-2 rounded fw-bold text-light bg-primary border-0 submitBtn">Register</button>
+
+                </div>
+            </div>
         </form>
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
+
 </html>
